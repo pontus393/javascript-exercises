@@ -1,38 +1,20 @@
 const fibonacci = function(n) {
+    
+    if (n < 0) {return "OOPS"}
+    
+    let fibonacci = [0,1];
 
-    if (n < 0) {
-        return "OOPS";
+    for (i = 1; i < n; i++) {
+        fibonacci.push(fibonacci[fibonacci.length - 2] + fibonacci[fibonacci.length - 1]);
     }
 
-    fibNumbers = [0,1];
+    return fibonacci[fibonacci.length - 1];
 
-    while (true) {
+    
 
-        if (fibNumbers.length <= n) {
-            
-            innerCount = 0;
-            
-            while (true) {
+}
 
-                if (fibNumbers[fibNumbers.length -2] + fibNumbers[fibNumbers.length -1] == innerCount) {
-                    fibNumbers.push(innerCount);
-                    break;
-                } else {
-                    innerCount++;
-                    continue;
-                }
-
-            }
-
-        } else {
-            
-            return fibNumbers[fibNumbers.length - 1];
-
-            break;
-        }
-    }
-
-};
+console.log(fibonacci(4))
 
 // Do not edit below this line
 module.exports = fibonacci;
