@@ -2,11 +2,10 @@ const getTheTitles = function(arr) {
 
     titleArr = [];
 
-    for (let x of arr.keys()) {
-        titleArr.push(arr[x].title);
-    }
+    arr.forEach(element => titleArr.push(element.title));
 
     return titleArr;
+
 
 };
 
